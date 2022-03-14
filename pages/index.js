@@ -2,71 +2,55 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from "../components/Header/Header";
+import Link from 'next/link';
+import React from "react";
+
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import CalculateIcon from '@mui/icons-material/Calculate';
+
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Trade-In Apple City</title>
-        <meta name="description" content="Trade-In Calculator by Apple City" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Trade-In Calculator by Apple City"/>
+        <link rel="icon" href="/favicon.ico"/>
       </Head>
-
-      <Header/>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Apple Trade-In
+          Apple City Trade-In
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href='/faq'>
+            <a className={styles.card}>
+              <div className={styles.mxcardimg}>
+                <QuestionMarkIcon className={styles.mxcardicon}/>
+                <Image src='/maia1.png' width={120} height={152} alt='FAQ'/>
+              </div>
+              <h2>Часті запитання &rarr;</h2>
+              <p>Тут ми зібрали все, що ви питали по Trade-In з нашими відповідями</p>
+            </a>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href='/calculator'>
+            <a className={styles.card}>
+              <div className={styles.mxcardimg}>
+                <CalculateIcon className={styles.mxcardicon + ' ' + styles.mxcardicono} />
+                <Image src='/max1.png' width={120} height={152} alt='Calculator' className={styles.cardimg}/>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+              </div>
+              <h2>Калькулятор &rarr;</h2>
+              <p>Самий відвертий калькулятор вартості твого iPhone</p>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            </a>
+          </Link>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+
     </div>
   )
 }

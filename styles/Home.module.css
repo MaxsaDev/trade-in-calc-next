@@ -12,21 +12,7 @@
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
 
 .title a {
   color: #0070f3;
@@ -42,7 +28,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .title,
@@ -93,7 +79,7 @@
 }
 
 .card h2 {
-  margin: 0 0 1rem 0;
+  margin: 1rem 0 1rem 0;
   font-size: 1.5rem;
 }
 
@@ -103,10 +89,24 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.mxcardicon {
+  font-size: 4rem;
+  color: #B78BF3;
+  transition: color 0.15s ease;
 }
+
+.mxcardicono {
+  order: 1;
+}
+
+.mxcardimg {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+
 
 @media (max-width: 600px) {
   .grid {
