@@ -3,13 +3,15 @@ import Link from "next/link";
 import styles from "./CardPage.module.scss";
 import Image from "next/image";
 
-const CardPage = ({link, icon, image, title, phone, description}) => {
+const CardPage = ({link, image, title, description}) => {
   return (
     <Link href={link}>
       <a className={styles.card}>
-          <Image src={image} width={120} height={152} alt={image}/>
-        <h2>{title} &rarr;</h2>
-        <p>{description}</p>
+        <div>
+          <Image src={image} width={200} height={189} alt={image}/>
+        </div>
+          <p className={styles.mxphoneSubtitle}>{description}</p>
+          <h2 className={styles.mxcardTitle}>{title}</h2>
       </a>
     </Link>
   );
