@@ -9,7 +9,7 @@ import CardPage from "../components/CardPage/CardPage";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 // import {Accordion, AccordionDetails, AccordionSummary} from "@mui/material";
-import { styled } from '@mui/material/styles';
+import {styled} from '@mui/material/styles';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
@@ -61,8 +61,6 @@ import Accordeon from "../components/Accordeon/Accordeon";
 // }));
 
 
-
-
 const Faq = ({faq}) => {
   const [expanded, setExpanded] = React.useState('panel1');
 
@@ -78,23 +76,27 @@ const Faq = ({faq}) => {
       </Head>
       {/*<div className={styles.grid}>*/}
       <div className={styles.grid2}>
-<Paper
-sx={{
-  padding: '10px',
-  margin: '10px'
-}}
->
-  <Box>
-    <CardPage
-      link={'tel:+380670095577'}
-      image='/maia3.png'
-      title='067 009 55 77'
-      description='Не знайшов відповіді? Телефонуй!'
-    />
+        <Box
+          sx={{
+            padding: '5px',
+            margin: '5px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            flex: 1
+          }}
+        >
+          <Box>
+            <CardPage
+              link={'tel:+380670095577'}
+              image='/maia3.png'
+              title='067 009 55 77'
+              description='Не знайшов відповіді? Телефонуй!'
+            />
 
-  </Box>
-  <Accordeon faq={faq}/>
-</Paper>
+          </Box>
+          <Accordeon faq={faq}/>
+        </Box>
 
       </div>
     </>
@@ -115,7 +117,7 @@ export const getStaticProps = async () => {
     return {
       props: {faq: data},
     }
-  }catch(e){
+  } catch (e) {
     return {
       props: {faq: null},
     }

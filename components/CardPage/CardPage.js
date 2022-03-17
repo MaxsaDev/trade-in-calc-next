@@ -1,6 +1,7 @@
 import React from 'react';
-import Link from "next/link";
 import styles from "./CardPage.module.scss";
+//next
+import Link from "next/link";
 import Image from "next/image";
 
 const CardPage = ({link, image, title, description}) => {
