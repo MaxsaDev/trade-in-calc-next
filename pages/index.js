@@ -7,24 +7,24 @@ import React from "react";
 
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import CalculateIcon from '@mui/icons-material/Calculate';
-import Card from "../components/Card/Card";
+import CardMainPage from "../components/CardMainPage/CardMainPage";
 
 
 export default function Home() {
   return (
     <>
      {/*<div className={styles.container}>*/}
-     {/* <Head>*/}
-     {/*   <title>Trade-In Apple City</title>*/}
-     {/*   <meta name="description" content="Trade-In Calculator by Apple City"/>*/}
-     {/*   <link rel="icon" href="/favicon.ico"/>*/}
-     {/* </Head>*/}
+      <Head>
+        <title>Trade-In Apple City</title>
+        <meta name="description" content="Trade-In Calculator by Apple City"/>
+        <link rel="icon" href="/favicon.ico"/>
+      </Head>
 
        {/*<main className={styles.main}>*/}
         <h1 className={styles.title}>Apple City Trade-In</h1>
 
         <div className={styles.grid}>
-          <Card
+          <CardMainPage
             page='/faq'
             icon={<QuestionMarkIcon />}
             image='/maia1.png'
@@ -33,7 +33,7 @@ export default function Home() {
             order='row'
           />
 
-          <Card
+          <CardMainPage
             page='/calculator'
             icon={<CalculateIcon />}
             image='/max1.png'

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Card.module.scss';
+import styles from './CardMainPage.module.scss';
 //next
 import Link from 'next/link';
 import Image from 'next/image';
@@ -9,7 +9,7 @@ import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 
 
-const Card = ({page, icon, image, title, description, order}) => {
+const CardMainPage = ({page, icon, image, title, description, order}) => {
   return (
     <Link href={page}>
       <a className={styles.card}>
@@ -24,4 +24,4 @@ const Card = ({page, icon, image, title, description, order}) => {
   );
 };
 
-export default Card;
+export default CardMainPage;

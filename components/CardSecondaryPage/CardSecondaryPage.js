@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from "./CardPage.module.scss";
+import styles from "./CardSecondaryPage.module.scss";
 //next
 import Link from "next/link";
 import Image from "next/image";
 
-const CardPage = ({link, image, title, description}) => {
+const CardSecondaryPage = ({link, image, title, description}) => {
   return (
     <Link href={link}>
       <a className={styles.card}>
@@ -18,4 +18,4 @@ const CardPage = ({link, image, title, description}) => {
   );
 };
 
-export default CardPage;
+export default CardSecondaryPage;
